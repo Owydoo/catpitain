@@ -6,6 +6,7 @@ var raft_size # Taille de la fenêtre
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#raft_size = get_canvas_item()
+	#salut je suis wooly
 	pass
 
 
