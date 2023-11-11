@@ -7,6 +7,8 @@ var raft_size # Taille de la fenêtre
 func _ready():
 	#raft_size = get_canvas_item()
 	#salut je suis wooly
+	
+	#bonjour wooly, je suis Hugo
 	pass
 
 
