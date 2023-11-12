@@ -1,8 +1,19 @@
-[gd_scene format=3 uid="uid://cottlna4hycx1"]
+[gd_scene load_steps=2 format=3 uid="uid://cottlna4hycx1"]
+
+[ext_resource type="Script" path="res://planche.gd" id="1_kfv8p"]
 
 [node name="planche" type="Node2D"]
+visible = false
+script = ExtResource("1_kfv8p")
+metadata/_edit_group_ = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 30.0
 offset_bottom = 100.0
 color = Color(1, 0.105882, 0, 1)
+metadata/_edit_group_ = true
+
+[node name="Timer" type="Timer" parent="."]
+process_callback = 0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cqh87ofkqe52q"]
+[gd_scene load_steps=5 format=3 uid="uid://cqh87ofkqe52q"]
 
 [ext_resource type="PackedScene" uid="uid://dwbk75grgm0eo" path="res://background.tscn" id="1_6uxxv"]
 [ext_resource type="PackedScene" uid="uid://de40esh41awsa" path="res://radeau.tscn" id="2_bfwmw"]
 [ext_resource type="PackedScene" uid="uid://c5dhpkis0472q" path="res://chat.tscn" id="3_40jkj"]
+[ext_resource type="PackedScene" uid="uid://cottlna4hycx1" path="res://planche.tscn" id="4_apfvc"]
 
 [node name="main" type="Node2D"]
 
@@ -13,3 +14,6 @@ position = Vector2(667, 251)
 
 [node name="chat" parent="." instance=ExtResource("3_40jkj")]
 position = Vector2(846, 435)
+
+[node name="planche" parent="." instance=ExtResource("4_apfvc")]
+position = Vector2(584, 427)
