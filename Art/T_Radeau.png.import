@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crcx4mgvprwh6"
-path="res://.godot/imported/e5a8d05d7a091cb.png-c79b84fd98276856a346bf0fb8bbb48f.ctex"
+uid="uid://yh5vh0dfehx"
+path="res://.godot/imported/T_Radeau.png-969177f2ff65070af7787644fdbf60a7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://e5a8d05d7a091cb.png"
-dest_files=["res://.godot/imported/e5a8d05d7a091cb.png-c79b84fd98276856a346bf0fb8bbb48f.ctex"]
+source_file="res://Art/T_Radeau.png"
+dest_files=["res://.godot/imported/T_Radeau.png-969177f2ff65070af7787644fdbf60a7.ctex"]
 
 [params]
 
