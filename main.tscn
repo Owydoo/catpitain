@@ -10,10 +10,10 @@ script = ExtResource("1_yacb0")
 
 [node name="background" parent="." instance=ExtResource("1_6uxxv")]
 
-[node name="chat" parent="." instance=ExtResource("3_40jkj")]
-z_index = 1
-position = Vector2(882, 513)
-
 [node name="radeau" parent="." instance=ExtResource("2_bfwmw")]
 position = Vector2(958, 598)
 script = null
+
+[node name="chat" parent="." instance=ExtResource("3_40jkj")]
+z_index = 1
+position = Vector2(882, 513)

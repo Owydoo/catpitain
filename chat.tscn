@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ceipfg0a06svy" path="res://Art/T_Cat_base.png" id="2_2u7o6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fkfyr"]
-size = Vector2(56.5, 63.25)
+size = Vector2(56.5, 26.625)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 motion_mode = 1
@@ -16,5 +16,5 @@ scale = Vector2(0.07, 0.07)
 texture = ExtResource("2_2u7o6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(25, 31)
+position = Vector2(25, 49.3125)
 shape = SubResource("RectangleShape2D_fkfyr")
