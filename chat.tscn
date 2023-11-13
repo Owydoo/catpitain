@@ -1,25 +1,20 @@
 [gd_scene load_steps=4 format=3 uid="uid://c5dhpkis0472q"]
 
-[ext_resource type="Texture2D" uid="uid://culodfipflhwe" path="res://Art/e5a8d05d7a091cb.png" id="1_cyopy"]
 [ext_resource type="Script" path="res://chat.gd" id="1_i7pb4"]
+[ext_resource type="Texture2D" uid="uid://ceipfg0a06svy" path="res://Art/T_Cat_base.png" id="2_2u7o6"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_jhlle"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_cyopy")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fkfyr"]
+size = Vector2(56.5, 63.25)
 
-[node name="chat" type="Node2D"]
+[node name="CharacterBody2D" type="CharacterBody2D"]
+motion_mode = 1
 script = ExtResource("1_i7pb4")
+speed = 400
 
-[node name="chat" type="AnimatedSprite2D" parent="."]
-position = Vector2(80, 77.75)
-scale = Vector2(0.158, 0.1545)
-sprite_frames = SubResource("SpriteFrames_jhlle")
-script = ExtResource("1_i7pb4")
-speed = 600
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("2_2u7o6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(25, 31)
+shape = SubResource("RectangleShape2D_fkfyr")
