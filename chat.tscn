@@ -1,10 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://c5dhpkis0472q"]
+[gd_scene load_steps=6 format=3 uid="uid://c5dhpkis0472q"]
 
 [ext_resource type="Script" path="res://chat.gd" id="1_i7pb4"]
 [ext_resource type="Texture2D" uid="uid://ceipfg0a06svy" path="res://Art/T_Cat_base.png" id="2_2u7o6"]
+[ext_resource type="Script" path="res://pickingArea2D.gd" id="3_k4iya"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fkfyr"]
 size = Vector2(56.5, 26.625)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aepgg"]
+size = Vector2(180, 208)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 position = Vector2(-25, 0)
@@ -20,3 +24,11 @@ texture = ExtResource("2_2u7o6")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(25, 48)
 shape = SubResource("RectangleShape2D_fkfyr")
+
+[node name="pickingArea2D" type="Area2D" parent="."]
+position = Vector2(27, 0)
+script = ExtResource("3_k4iya")
+
+[node name="pickingCollisionShape" type="CollisionShape2D" parent="pickingArea2D"]
+position = Vector2(-5, -1)
+shape = SubResource("RectangleShape2D_aepgg")

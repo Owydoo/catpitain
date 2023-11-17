@@ -17,10 +17,11 @@ func _process(delta):
 func isCatPositionInFront():
 #	if $chat.position.y > ($Radeau/Sprite2D_mat.position.y+($Radeau/Sprite2D_mat.texture.get_height()/2)):
 	if $chat.global_position.y > ($Radeau/matBottom.global_position.y):
-		print("chat :",$chat.global_position.y)
-		print("mat : ",$Radeau/matBottom.global_position.y)
+#		print("chat :",$chat.global_position.y)
+#		print("mat : ",$Radeau/matBottom.global_position.y)
 		return true
 	else : 
-		print("behind")
+#		print("behind")
 		return false	
 	
+
