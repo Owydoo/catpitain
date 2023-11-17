@@ -7,14 +7,16 @@
 size = Vector2(56.5, 26.625)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+position = Vector2(-25, 0)
 motion_mode = 1
 script = ExtResource("1_i7pb4")
 speed = 400
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -2)
 scale = Vector2(0.07, 0.07)
 texture = ExtResource("2_2u7o6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(25, 49.3125)
+position = Vector2(25, 48)
 shape = SubResource("RectangleShape2D_fkfyr")

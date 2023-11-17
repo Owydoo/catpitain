@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://c5k2bohnm2rnp"]
+
+[ext_resource type="Material" uid="uid://bj1ye6a14x84y" path="res://Shader Ronli/M_water_02.tres" id="1_idnrm"]
+[ext_resource type="Material" uid="uid://crghl87kcsmav" path="res://Shader Ronli/M_water_01.tres" id="2_881rr"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_s45h5"]
+lightmap_size_hint = Vector2i(9602, 5402)
+material = ExtResource("2_881rr")
+size = Vector2(1920, 1080)
+orientation = 2
+
+[node name="Plane_eau" type="MeshInstance2D"]
+z_index = -1
+texture_filter = 4
+texture_repeat = 2
+material = ExtResource("1_idnrm")
+position = Vector2(489.5, -335.499)
+scale = Vector2(1.31615, 1.66204)
+mesh = SubResource("PlaneMesh_s45h5")
