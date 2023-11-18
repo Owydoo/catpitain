@@ -110,7 +110,7 @@ function = 1
 
 [sub_resource type="VisualShaderNodeUVFunc" id="VisualShaderNodeUVFunc_r8f75"]
 output_port_for_preview = 0
-default_input_values = [1, Vector2(0, 0.05), 2, Vector2(0, 0)]
+default_input_values = [1, Vector2(0, 0.1), 2, Vector2(0, 0)]
 
 [sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_rexw5"]
 output_port_for_preview = 0
@@ -122,7 +122,7 @@ output_port_for_preview = 0
 operator = 2
 
 [sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_1qbdg"]
-default_input_values = [0, 0.0, 1, 1.2]
+default_input_values = [0, 0.0, 1, 3.0]
 operator = 2
 
 [sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_0ba81"]
@@ -169,7 +169,7 @@ function = 1
 
 [sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_7slpa"]
 output_port_for_preview = 0
-default_input_values = [0, 0.0, 1, 0.5]
+default_input_values = [0, 0.0, 1, 1.0]
 operator = 2
 
 [sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_prraa"]
@@ -269,7 +269,7 @@ void fragment() {
 
 
 // UVFunc:74
-	vec2 n_in74p1 = vec2(0.00000, 0.05000);
+	vec2 n_in74p1 = vec2(0.00000, 0.10000);
 	vec2 n_out74p0 = vec2(n_out64p0) * n_in74p1 + n_out73p0;
 
 
@@ -283,7 +283,7 @@ void fragment() {
 
 
 // FloatOp:77
-	float n_in77p1 = 1.20000;
+	float n_in77p1 = 3.00000;
 	float n_out77p0 = n_out64p0 * n_in77p1;
 
 
@@ -337,7 +337,7 @@ void fragment() {
 
 
 // FloatOp:90
-	float n_in90p1 = 0.50000;
+	float n_in90p1 = 1.00000;
 	float n_out90p0 = n_out88p0 * n_in90p1;
 
 
