@@ -1,9 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://cottlna4hycx1"]
+[gd_scene load_steps=2 format=3 uid="uid://djvhceqbi7q06"]
 
-[ext_resource type="Texture2D" uid="uid://b3arbl3v53f0" path="res://Art/T_Planche.png" id="2_edgae"]
+[ext_resource type="Texture2D" path="res://Art/T_Planche.png" id="2_edgae"]
 
 [node name="planche" type="Node2D"]
-visible = false
+z_index = 50
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

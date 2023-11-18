@@ -1,15 +1,15 @@
-[gd_scene load_steps=15 format=3 uid="uid://cqh87ofkqe52q"]
+[gd_scene load_steps=16 format=3 uid="uid://cqh87ofkqe52q"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_yacb0"]
 [ext_resource type="PackedScene" uid="uid://c5dhpkis0472q" path="res://chat.tscn" id="3_40jkj"]
 [ext_resource type="Texture2D" uid="uid://vn6rl2jjntlk" path="res://Art/T_Radeau.png" id="3_onifw"]
 [ext_resource type="Texture2D" uid="uid://c8bqud6sov6er" path="res://Art/T_Mat.png" id="4_36oyo"]
+[ext_resource type="PackedScene" uid="uid://djvhceqbi7q06" path="res://planche.tscn" id="4_apfvc"]
 [ext_resource type="PackedScene" uid="uid://c5k2bohnm2rnp" path="res://Shader Ronli/Plane_eau.tscn" id="6_3fugi"]
 [ext_resource type="Shader" uid="uid://cskcyrxu1tl0u" path="res://Shader Ronli/water_02.tres" id="7_rn858"]
 [ext_resource type="Texture2D" uid="uid://dxhv32xi4ev1" path="res://Shader Ronli/T_Caustics.jpg" id="8_yhpf3"]
-[ext_resource type="PackedScene" uid="uid://cottlna4hycx1" path="res://planche.tscn" id="4_apfvc"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_w317n"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wa2g5"]
 resource_local_to_scene = true
 shader = ExtResource("7_rn858")
 shader_parameter/Tiling_caustics = 5.0
@@ -117,9 +117,10 @@ _data = {
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_yacb0")
+planche_scene = ExtResource("4_apfvc")
 
 [node name="Plane_eau" parent="." instance=ExtResource("6_3fugi")]
-material = SubResource("ShaderMaterial_w317n")
+material = SubResource("ShaderMaterial_wa2g5")
 scale = Vector2(1.1, 1.24004)
 
 [node name="Node2D" type="Node2D" parent="."]
@@ -180,3 +181,8 @@ environment = SubResource("Environment_ae22x")
 libraries = {
 "": SubResource("AnimationLibrary_vuw44")
 }
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
