@@ -92,6 +92,7 @@ _data = {
 }
 
 [node name="main" type="Node2D"]
+script = ExtResource("1_mkfim")
 
 [node name="Plane_eau" parent="." instance=ExtResource("6_3fugi")]
 material = SubResource("ShaderMaterial_32mdh")
@@ -161,4 +162,11 @@ libraries = {
 position = Vector2(45.035, 0)
 
 [node name="planche" parent="." instance=ExtResource("4_apfvc")]
+visible = true
 position = Vector2(584, 427)
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_g50cp")
+
+[node name="Timer" type="Timer" parent="."]
+process_callback = 0
