@@ -16,16 +16,12 @@ func _process(delta):
 		
 
 func isCatPositionInFront():
-#	if $chat.position.y > ($Radeau/Sprite2D_mat.position.y+($Radeau/Sprite2D_mat.texture.get_height()/2)):
 	if $chat.global_position.y > ($Radeau/matBottom.global_position.y):
-#		print("chat :",$chat.global_position.y)
-#		print("mat : ",$Radeau/matBottom.global_position.y)
 		return true
 	else : 
-#		print("behind")
 		return false	
 		
 func _on_plank_plank_picked():
 	nbPlanksObtained+=1;
 	print("catPickedAPlank event : ", nbPlanksObtained)
-	pass # Replace with function body.
+	get_parent().get_node("plankInventory/plankInventoryNumber").text = str(nbPlanksObtained)

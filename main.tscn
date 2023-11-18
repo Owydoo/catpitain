@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cqh87ofkqe52q"]
+[gd_scene load_steps=17 format=3 uid="uid://cqh87ofkqe52q"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_yacb0"]
 [ext_resource type="PackedScene" uid="uid://c5dhpkis0472q" path="res://chat.tscn" id="3_40jkj"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c5k2bohnm2rnp" path="res://Shader Ronli/Plane_eau.tscn" id="6_3fugi"]
 [ext_resource type="Shader" uid="uid://cskcyrxu1tl0u" path="res://Shader Ronli/water_02.tres" id="7_rn858"]
 [ext_resource type="Texture2D" uid="uid://dxhv32xi4ev1" path="res://Shader Ronli/T_Caustics.jpg" id="8_yhpf3"]
+[ext_resource type="Texture2D" uid="uid://dr8t1cf1hnsrs" path="res://Art/T_Planche.png" id="9_4ru1j"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qip61"]
 resource_local_to_scene = true
@@ -97,6 +98,26 @@ _data = {
 material = SubResource("ShaderMaterial_qip61")
 position = Vector2(45, -3)
 scale = Vector2(1.0349, 1.45741)
+
+[node name="plankInventory" type="Panel" parent="."]
+z_index = 1000
+offset_left = -876.0
+offset_top = -508.0
+offset_right = -701.0
+offset_bottom = -333.0
+
+[node name="plankInventorySprite" type="Sprite2D" parent="plankInventory"]
+position = Vector2(86.5763, 87.7949)
+rotation = 0.740458
+scale = Vector2(0.778753, 0.778753)
+texture = ExtResource("9_4ru1j")
+
+[node name="plankInventoryNumber" type="Label" parent="plankInventory"]
+layout_mode = 0
+offset_left = 151.0
+offset_top = 150.0
+offset_right = 175.0
+offset_bottom = 174.0
 
 [node name="Node2D" type="Node2D" parent="."]
 rotation = -0.123918
