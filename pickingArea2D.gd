@@ -10,7 +10,3 @@ func _ready():
 func _process(delta):
 	pass
 
-
-func _on_plank_area_entered(area):
-	print("robert, touche la planche")
-	pass # Replace with function body.

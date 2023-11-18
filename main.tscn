@@ -1,24 +1,20 @@
-[gd_scene load_steps=18 format=3 uid="uid://cqh87ofkqe52q"]
+[gd_scene load_steps=16 format=3 uid="uid://cqh87ofkqe52q"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_yacb0"]
 [ext_resource type="PackedScene" uid="uid://c5dhpkis0472q" path="res://chat.tscn" id="3_40jkj"]
 [ext_resource type="Texture2D" uid="uid://vn6rl2jjntlk" path="res://Art/T_Radeau.png" id="3_onifw"]
 [ext_resource type="Texture2D" uid="uid://c8bqud6sov6er" path="res://Art/T_Mat.png" id="4_36oyo"]
-[ext_resource type="Script" path="res://Plank.gd" id="5_2k3w8"]
+[ext_resource type="PackedScene" uid="uid://qqeab7j1ndrd" path="res://plank.tscn" id="5_a287l"]
 [ext_resource type="PackedScene" uid="uid://c5k2bohnm2rnp" path="res://Shader Ronli/Plane_eau.tscn" id="6_3fugi"]
 [ext_resource type="Shader" uid="uid://cskcyrxu1tl0u" path="res://Shader Ronli/water_02.tres" id="7_rn858"]
-[ext_resource type="Texture2D" uid="uid://dr8t1cf1hnsrs" path="res://Art/T_Planche.png" id="8_ovupf"]
 [ext_resource type="Texture2D" uid="uid://dxhv32xi4ev1" path="res://Shader Ronli/T_Caustics.jpg" id="8_yhpf3"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_yg6ay"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_o50rn"]
 resource_local_to_scene = true
 shader = ExtResource("7_rn858")
 shader_parameter/Tiling_caustics = 5.0
 shader_parameter/Tiling_caustics2 = 2.0
 shader_parameter/Caustics = ExtResource("8_yhpf3")
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bi1yj"]
-size = Vector2(378.02, 167.827)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6eqob"]
 size = Vector2(1689.73, 60)
@@ -98,7 +94,7 @@ _data = {
 [node name="main" type="Node2D"]
 
 [node name="Plane_eau" parent="." instance=ExtResource("6_3fugi")]
-material = SubResource("ShaderMaterial_yg6ay")
+material = SubResource("ShaderMaterial_o50rn")
 position = Vector2(45, -3)
 scale = Vector2(1.0349, 1.45741)
 
@@ -107,20 +103,9 @@ rotation = -0.123918
 script = ExtResource("1_yacb0")
 metadata/_edit_group_ = true
 
-[node name="Plank" type="Area2D" parent="Node2D"]
-z_index = 50
-position = Vector2(546, -228)
-rotation = 0.133545
-scale = Vector2(1, 1)
-script = ExtResource("5_2k3w8")
-
-[node name="plankCollisionShape" type="CollisionShape2D" parent="Node2D/Plank"]
-z_index = 51
-position = Vector2(3.66101, -6.54572)
-shape = SubResource("RectangleShape2D_bi1yj")
-
-[node name="plankSprite" type="Sprite2D" parent="Node2D/Plank"]
-texture = ExtResource("8_ovupf")
+[node name="Plank" parent="Node2D" instance=ExtResource("5_a287l")]
+position = Vector2(524, -167)
+rotation = 0.408945
 
 [node name="Radeau" type="StaticBody2D" parent="Node2D"]
 z_index = 1
@@ -179,6 +164,8 @@ libraries = {
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(45.035, 0)
 
-[connection signal="area_entered" from="Node2D/Plank" to="Node2D/chat/pickingArea2D" method="_on_plank_area_entered"]
+[connection signal="area_entered" from="Node2D/chat/pickingArea2D" to="Node2D/Plank" method="_on_picking_area_2d_area_entered"]
+[connection signal="area_exited" from="Node2D/chat/pickingArea2D" to="Node2D/Plank" method="_on_picking_area_2d_area_exited"]
 
+[editable path="Node2D/Plank"]
 [editable path="Node2D/chat"]
