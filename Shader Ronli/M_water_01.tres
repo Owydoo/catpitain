@@ -1,0 +1,7 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://crghl87kcsmav"]
+
+[ext_resource type="Shader" uid="uid://dblvne3iaunm4" path="res://Ronli/Shader Ronli/water_01.tres" id="1_w5wo7"]
+
+[resource]
+resource_local_to_scene = true
+shader = ExtResource("1_w5wo7")

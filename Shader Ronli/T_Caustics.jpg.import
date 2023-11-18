@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vn6rl2jjntlk"
-path="res://.godot/imported/T_Radeau.png-969177f2ff65070af7787644fdbf60a7.ctex"
+uid="uid://dxhv32xi4ev1"
+path="res://.godot/imported/T_Caustics.jpg-69623868e3cd08ab5cf523021b51cc11.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/T_Radeau.png"
-dest_files=["res://.godot/imported/T_Radeau.png-969177f2ff65070af7787644fdbf60a7.ctex"]
+source_file="res://Shader Ronli/T_Caustics.jpg"
+dest_files=["res://.godot/imported/T_Caustics.jpg-69623868e3cd08ab5cf523021b51cc11.ctex"]
 
 [params]
 
@@ -21,7 +21,7 @@ compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=false
+mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""

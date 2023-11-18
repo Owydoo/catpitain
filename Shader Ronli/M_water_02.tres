@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://bj1ye6a14x84y"]
+
+[ext_resource type="Shader" uid="uid://cskcyrxu1tl0u" path="res://Shader Ronli/water_02.tres" id="1_bojg1"]
+[ext_resource type="Texture2D" uid="uid://dxhv32xi4ev1" path="res://Shader Ronli/T_Caustics.jpg" id="2_ac4hd"]
+
+[resource]
+resource_local_to_scene = true
+shader = ExtResource("1_bojg1")
+shader_parameter/Tiling_caustics = 10.0
+shader_parameter/Tiling_caustics2 = 6.0
+shader_parameter/Caustics = ExtResource("2_ac4hd")
