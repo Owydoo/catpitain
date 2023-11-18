@@ -1,5 +1,6 @@
 extends Node2D
 
+var nbPlanksObtained = 0;
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -23,5 +24,8 @@ func isCatPositionInFront():
 	else : 
 #		print("behind")
 		return false	
-	
-
+		
+func _on_plank_plank_picked():
+	nbPlanksObtained+=1;
+	print("catPickedAPlank event : ", nbPlanksObtained)
+	pass # Replace with function body.

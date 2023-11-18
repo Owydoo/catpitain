@@ -3,6 +3,8 @@ extends Area2D
 var objectPickable = false;
 var buttonPressed = false;
 
+signal plankPicked;
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -14,7 +16,7 @@ func _process(delta):
 		buttonPressed = true;
 		print("pick plank")
 		#ajout de la planche dans ... quelque part ?
-		
+		plankPicked.emit();
 		#faire disparaître la planche
 		queue_free();
 	pass

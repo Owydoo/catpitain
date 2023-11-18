@@ -9,7 +9,7 @@
 [ext_resource type="Shader" uid="uid://cskcyrxu1tl0u" path="res://Shader Ronli/water_02.tres" id="7_rn858"]
 [ext_resource type="Texture2D" uid="uid://dxhv32xi4ev1" path="res://Shader Ronli/T_Caustics.jpg" id="8_yhpf3"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_o50rn"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qip61"]
 resource_local_to_scene = true
 shader = ExtResource("7_rn858")
 shader_parameter/Tiling_caustics = 5.0
@@ -94,7 +94,7 @@ _data = {
 [node name="main" type="Node2D"]
 
 [node name="Plane_eau" parent="." instance=ExtResource("6_3fugi")]
-material = SubResource("ShaderMaterial_o50rn")
+material = SubResource("ShaderMaterial_qip61")
 position = Vector2(45, -3)
 scale = Vector2(1.0349, 1.45741)
 
@@ -164,6 +164,7 @@ libraries = {
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(45.035, 0)
 
+[connection signal="plankPicked" from="Node2D/Plank" to="Node2D" method="_on_plank_plank_picked"]
 [connection signal="area_entered" from="Node2D/chat/pickingArea2D" to="Node2D/Plank" method="_on_picking_area_2d_area_entered"]
 [connection signal="area_exited" from="Node2D/chat/pickingArea2D" to="Node2D/Plank" method="_on_picking_area_2d_area_exited"]
 
