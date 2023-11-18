@@ -22,6 +22,16 @@ func isCatPositionInFront():
         return false	
 
 func _on_timer_timeout():
+#    var planche_instance = planche_scene.instantiate()
+#    add_child(planche_instance)
     var planche_instance = planche_scene.instantiate()
+
+    # Obtenez la taille de la fenêtre du jeu
+    var window_size = get_viewport_rect().size
+    
+    # Positionnez l'instance de planche à une position aléatoire
+    planche_instance.position.x = randf_range(-(window_size.x/2), window_size.x/2)
+    planche_instance.position.y = randf_range(-(window_size.y/2), window_size.y/2)
+
     add_child(planche_instance)
     

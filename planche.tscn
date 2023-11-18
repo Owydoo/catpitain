@@ -1,10 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://djvhceqbi7q06"]
+[gd_scene load_steps=3 format=3 uid="uid://djvhceqbi7q06"]
 
 [ext_resource type="Texture2D" path="res://Art/T_Planche.png" id="2_edgae"]
 
-[node name="planche" type="Node2D"]
-z_index = 50
-metadata/_edit_group_ = true
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tl0vs"]
+size = Vector2(208, 58)
+
+[node name="RigidBody2D" type="RigidBody2D"]
+gravity_scale = 0.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_edgae")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_tl0vs")
